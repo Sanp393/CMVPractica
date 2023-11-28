@@ -3,32 +3,24 @@
 *@
 @{
     ViewData["Title"] = "Animales David";
-
+    
 }
 
 @model List<Animal>
 
 <ul>
+    <h1>
+        @ViewBag.Test
+    </h1>
     @foreach (Animal animal in Model)
     {
         <li>Id: @animal.IdAnimal Nombre: @animal.Nombre</li> 
         //<li>Nombre: @animal.Nombre</li>
     }
+    <h1>
+        @ViewBag.AnimalAleatorio
+    </h1>
+
 </ul>
 
 
-<h1>
-    Animales David
-</h1>
-<div class="text-center">
-    <form asp-controller="Home" asp-action="SubmitFormAnimales" method="post">
-        <div class="row">
-            <div class="form-group">
-                <input name="nombre" placeholder="Nombre Animal" class="form-control">
-            </div>
-            <div class="form-group">
-                <button type="submit" class="btn btn-default">Submit</button>
-            </div>
-        </div>
-    </form>
-</div>
