@@ -1,3 +1,7 @@
+using ProyectoMVC.Servicios.Configuracion;
+using ProyectoMVC.Servicios.Contratos;
+using ProyectoMVC.Servicios.Implementacion;
+
 namespace ProyectoMVC
 {
     public class Program
@@ -8,6 +12,11 @@ namespace ProyectoMVC
 
             // Add services to the container.
             builder.Services.AddControllersWithViews();
+            //Agregamos a la conexion a BBDD
+            builder.Services.Configure<ConfiguracionConexion>(builder.Configuration.GetSection("ConfiguracionConexion"));
+            //Agregamos servicios por tabla
+            builder.Services.AddScoped<IAnimalService, AnimalService>();
+            builder.Services.AddScoped<ITipoAnimalService, TipoAnimalService>();
 
             var app = builder.Build();
 

@@ -9,7 +9,7 @@
 @model Animal
 
 <h1>
-    Crear Animales David
+    Crear Animales Guillermo
 </h1>
 
 <form asp-action="crear" asp-controller="animales" method="post" asp-antiforgery="true">
@@ -22,9 +22,9 @@
     </div>
 
     <div class="form-group">
-        <label asp-for="Nombre"></label>
-        <input asp-for="Nombre" class="form-control" />
-        <span asp-validation-for="Nombre" class="text-danger" onclick="MostrarAnimales(IdAnimal, Nombre)"></span>
+        <label asp-for="NombreAnimal"></label>
+        <input asp-for="NombreAnimal" class="form-control" />
+        <span asp-validation-for="NombreAnimal" class="text-danger" onclick="MostrarAnimales(IdAnimal, Nombre)"></span>
     </div>
 
     <button type="submit" class="btn btn-primary">Submit</button>

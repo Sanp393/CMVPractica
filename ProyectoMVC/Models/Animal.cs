@@ -11,7 +11,10 @@ namespace ProyectoMVC.Models
         [Required]
         [Display(Name = "Animal")]
         [StringLength(10, ErrorMessage = "El nombre de animal introducido no puede exceder los 10 carácteres")]
-        public string Nombre { get; set; }
+        public string NombreAnimal { get; set; }
+        public string Raza { get; set; }
+        public int RIdTipoAnimal { get; set; }
+        public DateTime? FechaNacimiento { get; set; }
 
         
     }
